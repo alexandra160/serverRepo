@@ -9,7 +9,7 @@ const ObjectId = require('mongodb').ObjectId;
 app.use(cors());
 
 app.get('/db', function (req, res) {
-    MongoClient.connect('mongodb+srv://alexandra:alexandra123@cluster0.wkkgp6t.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true }, function(err, db) {
+    MongoClient.connect('mongodb+srv://alexandra:ilIubescPeTeo@cluster0.wkkgp6t.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true }, function(err, db) {
         if (err) throw err;
         var dbo = db.db("Projects");
         dbo.collection("schoolProjects").find({}, { projection: { _id: 0, project_link: 1 } }).toArray(function(err, result) {
